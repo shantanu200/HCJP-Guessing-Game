@@ -105,6 +105,9 @@ section{
     font-weight: bold;
 }
 
+.game_block .restart{
+    display: none;
+}
 #num{
     text-align: center;
 }
