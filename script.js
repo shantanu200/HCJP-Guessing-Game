@@ -16,7 +16,7 @@ btn.addEventListener("click", () => {
 });
 
 check.addEventListener("click", () => {
-  let user_num = num.value;
+  let user_num = Number(num.value);
 
   if (count >= 10) {
     message.textContent = "Game Over!!!";
@@ -27,7 +27,7 @@ check.addEventListener("click", () => {
     } else if (user_num < guess_num) {
       message.textContent = "Guess is Low";
       count++;
-    } else {
+    } else if(user_num == guess_num) {
       message.textContent = "You win the game";
     }
     score.textContent = "Total Attempt: " + count;
