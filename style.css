@@ -105,6 +105,10 @@ section{
     font-weight: bold;
 }
 
+#num{
+    text-align: center;
+}
+
 @media only screen and (max-width:1300px) and (min-width:851px) {
     .info_block{
         height: 65vh;
