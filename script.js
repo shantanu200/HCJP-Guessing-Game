@@ -20,15 +20,18 @@ check.addEventListener("click", () => {
 
   if (count >= 10) {
     message.textContent = "Game Over!!!";
+    score.textContent = "All Chances are Over!!";
+    num.style.display = "none";
+    check.style.display = "none";
   } else {
     if (user_num > guess_num) {
-      message.textContent = "Guess is High";
+      message.textContent = "Guess is High 😔";
       count++;
     } else if (user_num < guess_num) {
-      message.textContent = "Guess is Low";
+      message.textContent = "Guess is Low 😯";
       count++;
     } else if(user_num == guess_num) {
-      message.textContent = "You win the game";
+      message.textContent = "You win the game 🥳";
     }
     score.textContent = "Total Attempt: " + count;
   }
