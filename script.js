@@ -5,6 +5,7 @@ const num = document.getElementById("num");
 const score = document.querySelector(".score");
 const check = document.getElementById("check_btn");
 const message = document.querySelector(".message");
+const restart = document.querySelector(".restart");
 
 let guess_num = Math.floor(Math.random() * 100 + 1);
 let count = 0;
@@ -23,6 +24,7 @@ check.addEventListener("click", () => {
     score.textContent = "All Chances are Over!!";
     num.style.display = "none";
     check.style.display = "none";
+    restart.style.display = "block";
   } else {
     if(num.value!=""){
       if (user_num > guess_num) {
@@ -33,11 +35,16 @@ check.addEventListener("click", () => {
         count++;
       } else if(user_num == guess_num) {
         message.textContent = "You win the game 🥳";
+        check.style.display = "none";
+        num.style.display = "none";
+        restart.style.display = "block";
       }
       score.textContent = "Total Attempt: " + count;
     }
-    
   }
-
   num.value = "";
 });
+
+restart.addEventListener("click",()=>{
+  document.location.reload(true);
+})
