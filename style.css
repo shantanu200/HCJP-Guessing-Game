@@ -13,15 +13,15 @@ body{
     background: linear-gradient(to right, #6a3093, #a044ff);
 }
 section{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
-.info_block{
-    height: 60vh;
+.start_block{
+    height: 60%;
     width: 40%;
     background: whitesmoke;
     border-radius: 20px;
@@ -31,13 +31,19 @@ section{
     justify-content: center;
     flex-direction: column;
 }
-.info_block .title h1{
+
+.start_block .title{
+    height: 20%;
+}
+
+.start_block .title h1{
     margin-top: 20px;
     text-align: center;
     text-decoration: underline;
 }
 
 .div_img{
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -52,10 +58,13 @@ section{
 
 .div_btn{
     height: 40%;
-    width: 100%;
+    width: 80%;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .div_btn button{
@@ -65,6 +74,44 @@ section{
     color: whitesmoke;
     border-color: #38ef7d;
 }
+.instruction_block{
+    height: 60vh;
+    width: 40%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 10px #4b4949;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.instruction_block .inst_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.instruction_block h1{
+    font-size: 3vmax;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.instruction_block .inst_list .info{
+    font-size:1.5vmax;
+}
+
+.instruction_block button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background: #11998e;
+    color: whitesmoke;
+}
+
 
 .game_block{
     height: 60vh;
@@ -83,7 +130,9 @@ section{
     
 }
 .game_block input{
+    width:80%;
     padding: 10px 20px;
+
 }
 
 .game_block button{
@@ -112,21 +161,63 @@ section{
     text-align: center;
 }
 
+.table_block{
+    width:50%;
+    height: 60vh;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 5px 10px #4b4949;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.table_block h1{
+    margin-bottom: 20px;
+    font-size: 3vmax;
+}
+
+.table_block .t_block{
+    width: 80%;
+    overflow-y: auto;
+
+}
+
+.table_block .t_block thead{
+    text-align: center;
+}
+.table_block .t_block tbody{
+    text-align: center;
+}
 @media only screen and (max-width:1300px) and (min-width:851px) {
-    .info_block{
+    .start_block{
         height: 65vh;
         width: 50%;
     }
 }
 
 @media only screen and (max-width:850px) {
-    .info_block{
+    .start_block{
         height: 60vh;
         width: 80%;
     }
 
    .div_img img{
        width: 50%;
+   }
+
+   .instruction_block{
+       height: 60vh;
+       width: 80%;
+   }
+
+   .instruction_block h1{
+       font-size: 4vmax;
+   }
+    
+   .instruction_block .inst_list .info{
+       font-size: 2vmax;
    }
 
    .game_block{
@@ -140,5 +231,10 @@ section{
 
    .game_block .message{
        font-size: 3vmax;
+   }
+
+   .table_block{
+       height: 60vh;
+       width: 80%;
    }
 }
